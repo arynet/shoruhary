@@ -3,7 +3,7 @@ Shoruhary Thawab Theme
 
 This is redesign of thawab theme.
 
-![Shoruhary]()
+![Shoruhary](https://raw.githubusercontent.com/arynet/shoruhary/master/shoruhary.png)
 
 #### How to install? ####
 
@@ -15,4 +15,4 @@ Add main.txt, its should be here = ~/.thawab/conf/main.txt, and add the followin
 
 `theme=shoruhary`
 
-Thank you!
+Thank you!
