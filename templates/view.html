@@ -1,0 +1,39 @@
+%_r.title=title
+%_r.add_js_link('th-main.js')
+%_r.add_js_link('th-view.js')
+%def x_js_script_f():
+<script type="text/javascript">
+var script='';
+var title='{{title}}';
+var kitabId='{{kitabId}}';
+var kitabUid=encodeURI('{{kitabId}}');
+var is_indexed={{is_indexed}};
+var is_static={{is_static}};
+var highlighted="";
+</script>
+%end
+
+%def topnav_f():
+  <a id="prevLink" class="blurOnFocus" style="float:right;" href="{{prevUrl}}" title="{{prevTitle}}"><i class="menudua fa fa-arrow-right"></i></a>
+  <a id="upLink" class="blurOnFocus" style="float:right;" href="{{upUrl}}" title="{{upTitle}}"><i class="menudua fa fa-arrow-up"></i></a>
+  <a class="blurOnFocus" style="float:right;" href="{{d}}_i0{{s}}" title="{{title}}"><i class="menudua fa fa-home"></i></a>
+  <a id="nextLink" class="blurOnFocus" style="float:right;" href="{{nextUrl}}" title="{{nextTitle}}"><i class="menudua fa fa-arrow-left"></i></a>
+  <a class="blurOnFocus" style="float:right;" href="javascript:window.print()" title="طباعة الصفحة"><i class="menudua fa fa-print"></i></a>
+%end
+
+
+<div id="contentheader">
+<h1><a href="/">مكتبة ثواب</a> - <a href="{{d}}_i0{{s}}">{{title}}</a></h1>
+<div id="breadcrumbs">{{!breadcrumbs}}</div>
+</div>
+<div id="contentbody">
+
+  <div id="maincontent">{{!content}}</div>
+  <div id="subtoc">{{!childrenLinks}}</div>
+
+</div>
+
+
+
+%rebase layout typ="view", topnav=topnav_f, x_js_script=x_js_script_f
+
